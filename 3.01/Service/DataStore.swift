@@ -22,7 +22,7 @@ class DataStore {
         "flipX",
         "swing",
         "flash",
-        "fall"
+        "fadeIn"
     ]
     
     let curves = [

@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         
         if sender.currentTitle == "Run" {
             setupSpringView()
-            setupLabels()
             animationParameters = Animation.getAnimationParameters()
             sender.setTitle(animationParameters.preset, for: .normal)
         } else {
