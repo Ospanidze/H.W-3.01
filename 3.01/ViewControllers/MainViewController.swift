@@ -12,22 +12,18 @@ final class MainViewController: UIViewController {
 
     @IBOutlet var springAnimationView: SpringView!
     
-    @IBOutlet var presetLabel: UILabel!
-    @IBOutlet var curveLabel: UILabel!
-    @IBOutlet var forceLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var delayLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     
     private var animationParameters = Animation.getAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setValue(lables: presetLabel, curveLabel, forceLabel, durationLabel, delayLabel)
+        setupLabel()
     }
     
     @IBAction func runCoreAnimation(_ sender: UIButton) {
         setupSpringView()
-        setValue(lables: presetLabel, curveLabel, forceLabel, durationLabel, delayLabel)
+        setupLabel()
         animationParameters = Animation.getAnimation()
         sender.setTitle(animationParameters.preset, for: .normal)
     }
@@ -45,9 +41,7 @@ extension MainViewController {
         springAnimationView.animate()
     }
     
-    private func setValue(lables: UILabel...) {
-        for (index, label) in lables.enumerated() {
-            label.text = animationParameters.description[index]
-        }
+    private func setupLabel() {
+        descriptionLabel.text = animationParameters.description
     }
 }
