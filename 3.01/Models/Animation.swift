@@ -12,16 +12,16 @@ struct Animation {
     let duration: Double
     let delay = 0.30
     
-    static func getAnimationParameters() -> Animation {
+    static func getAnimation() -> Animation {
         
-        let presents = DataStore.shared.presets
-        let curves = DataStore.shared.curves
+        let present = Singleton.shared.presets.randomElement() ?? ""
+        let curve = Singleton.shared.curves.randomElement() ?? ""
         let force = Double.random(in: 1...1.5)
         let duration = Double.random(in: 1.1...1.5)
         
         return Animation(
-            preset: presents[Int.random(in: 0..<presents.count)],
-            curve: curves[Int.random(in: 0..<curves.count)],
+            preset: present,
+            curve: curve,
             force: force,
             duration: duration
         )

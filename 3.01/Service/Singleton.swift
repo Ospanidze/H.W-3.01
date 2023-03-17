@@ -5,11 +5,11 @@
 //  Created by Айдар Оспанов on 16.03.2023.
 //
 
-class DataStore {
+final class Singleton {
     
-    static let shared = DataStore()
+    static let shared = Singleton()
     
-    init() {}
+    private init() {}
     
     let presets = [
         "slideRight",
