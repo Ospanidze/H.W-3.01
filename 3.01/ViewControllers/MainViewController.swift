@@ -8,7 +8,7 @@
 import UIKit
 import SpringAnimation
 
-class ViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     @IBOutlet weak var springAnimationView: SpringView!
     
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 
 // MARK: Private Methods
 
-extension ViewController {
+extension MainViewController {
     private func setupSpringView() {
         springAnimationView.animation = animationParameters.preset
         springAnimationView.curve =  animationParameters.curve
