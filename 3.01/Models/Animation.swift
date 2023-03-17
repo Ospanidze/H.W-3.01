@@ -12,12 +12,20 @@ struct Animation {
     let duration: Double
     let delay = 0.30
     
-    var description: [String] {
+    var description: String {
         let stringForce = string(from: force)
         let stringDuration = string(from: duration)
         let stringDelay = string(from: delay)
         
-        return [preset, curve, stringForce, stringDuration, stringDelay]
+        let description = """
+        preset: \(preset)
+        curve: \(curve)
+        force: \(stringForce)
+        duration: \(stringDuration)
+        delay: \(stringDelay)
+        """
+        
+        return description
     }
     
     static func getAnimation() -> Animation {
