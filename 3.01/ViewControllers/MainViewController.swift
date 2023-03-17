@@ -21,6 +21,7 @@ final class MainViewController: UIViewController {
     private var animationParameters = Animation.getAnimationParameters()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         setupLabels()
     }
     
