@@ -12,6 +12,14 @@ struct Animation {
     let duration: Double
     let delay = 0.30
     
+    var description: [String] {
+        let stringForce = string(from: force)
+        let stringDuration = string(from: duration)
+        let stringDelay = string(from: delay)
+        
+        return [preset, curve, stringForce, stringDuration, stringDelay]
+    }
+    
     static func getAnimation() -> Animation {
         
         let present = Singleton.shared.presets.randomElement() ?? ""
@@ -25,5 +33,9 @@ struct Animation {
             force: force,
             duration: duration
         )
+    }
+    
+    private func string(from number: Double) -> String {
+        String(format: "%.2f", number)
     }
 }
