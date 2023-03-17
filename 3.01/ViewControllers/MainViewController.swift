@@ -10,7 +10,7 @@ import SpringAnimation
 
 final class MainViewController: UIViewController {
 
-    @IBOutlet weak var springAnimationView: SpringView!
+    @IBOutlet var springAnimationView: SpringView!
     
     @IBOutlet var presetLabel: UILabel!
     @IBOutlet var curveLabel: UILabel!
@@ -18,7 +18,7 @@ final class MainViewController: UIViewController {
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var delayLabel: UILabel!
     
-    private var animationParameters = Animation.getAnimationParameters()
+    private var animationParameters = Animation.getAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +26,10 @@ final class MainViewController: UIViewController {
     }
     
     @IBAction func runCoreAnimation(_ sender: UIButton) {
-        
-        if sender.currentTitle == "Run" {
-            setupSpringView()
-            animationParameters = Animation.getAnimationParameters()
-            sender.setTitle(animationParameters.preset, for: .normal)
-        } else {
-            setupSpringView()
-            setupLabels()
-            animationParameters = Animation.getAnimationParameters()
-            sender.setTitle(animationParameters.preset, for: .normal)
-        }
+        setupSpringView()
+        setupLabels()
+        animationParameters = Animation.getAnimation()
+        sender.setTitle(animationParameters.preset, for: .normal)
     }
 }
 
@@ -59,9 +52,9 @@ extension MainViewController {
         
         presetLabel.text = "\(animationParameters.preset)"
         curveLabel.text = "\(animationParameters.curve)"
-        forceLabel.text = "\(stringForce)"
-        durationLabel.text = "\(stringDuration)"
-        delayLabel.text = "\(stringDelay)"
+        forceLabel.text = stringForce
+        durationLabel.text = stringDuration
+        delayLabel.text = stringDelay
     }
     
     private func string(from number: Double) -> String {

@@ -14,7 +14,7 @@
 		EFE1BF3329C339C00097204C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE1BF3229C339C00097204C /* Assets.xcassets */; };
 		EFE1BF3629C339C00097204C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE1BF3429C339C00097204C /* LaunchScreen.storyboard */; };
 		EFE1BF4429C3540A0097204C /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = EFE1BF4329C3540A0097204C /* SpringAnimation */; };
-		EFE1BF4829C37A640097204C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1BF4729C37A640097204C /* DataStore.swift */; };
+		EFE1BF4829C37A640097204C /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1BF4729C37A640097204C /* Singleton.swift */; };
 		EFE1BF4B29C37CF30097204C /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1BF4A29C37CF30097204C /* Animation.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		EFE1BF3229C339C00097204C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFE1BF3529C339C00097204C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFE1BF3729C339C00097204C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFE1BF4729C37A640097204C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		EFE1BF4729C37A640097204C /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		EFE1BF4A29C37CF30097204C /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +110,7 @@
 		EFE1BF4629C37A420097204C /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				EFE1BF4729C37A640097204C /* DataStore.swift */,
+				EFE1BF4729C37A640097204C /* Singleton.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			files = (
 				EFE1BF2E29C339BF0097204C /* MainViewController.swift in Sources */,
 				EFE1BF2A29C339BF0097204C /* AppDelegate.swift in Sources */,
-				EFE1BF4829C37A640097204C /* DataStore.swift in Sources */,
+				EFE1BF4829C37A640097204C /* Singleton.swift in Sources */,
 				EFE1BF4B29C37CF30097204C /* Animation.swift in Sources */,
 				EFE1BF2C29C339BF0097204C /* SceneDelegate.swift in Sources */,
 			);
