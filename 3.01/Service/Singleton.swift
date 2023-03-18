@@ -11,30 +11,33 @@ final class Singleton {
     
     private init() {}
     
-    let presets = [
-        "slideRight",
-        "squeezeDown",
-        "fadeOutIn",
-        "shake",
-        "morph",
-        "wobble",
-        "zoomIn",
-        "flipX",
-        "swing",
-        "flash",
-        "fadeIn"
-    ]
-    
-    let curves = [
-        "easeInSine",
-        "linear",
-        "spring",
-        "easeInQuad",
-        "easeInCubic",
-        "easeInExpo",
-        "easeInQuint",
-        "easeOut",
-        "easeIn",
-        "easeInCirc"
-    ]
+    let presets = Preset.allCases
+    let curves = Curve.allCases
+}
+
+enum Preset: String, CaseIterable {
+    case slideRight
+    case squeezeDown
+    case fadeOutIn
+    case shake
+    case morph
+    case wobble
+    case zoomIn
+    case flipX
+    case swing
+    case flash
+    case fadeIn
+}
+
+enum Curve: String, CaseIterable {
+    case easeInSine
+    case linear
+    case spring
+    case easeInQuad
+    case easeInCubic
+    case easeInExpo
+    case easeInQuint
+    case easeOut
+    case easeIn
+    case easeInCirc
 }

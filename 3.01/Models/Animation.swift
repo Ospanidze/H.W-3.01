@@ -30,8 +30,8 @@ struct Animation {
     
     static func getAnimation() -> Animation {
         
-        let present = Singleton.shared.presets.randomElement() ?? ""
-        let curve = Singleton.shared.curves.randomElement() ?? ""
+        let present = Singleton.shared.presets.randomElement()?.rawValue ?? ""
+        let curve = Singleton.shared.curves.randomElement()?.rawValue ?? ""
         let force = Double.random(in: 1...1.5)
         let duration = Double.random(in: 1.1...1.5)
         
