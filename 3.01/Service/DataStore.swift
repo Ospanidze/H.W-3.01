@@ -5,9 +5,9 @@
 //  Created by Айдар Оспанов on 16.03.2023.
 //
 
-final class Singleton {
+final class DataStore {
     
-    static let shared = Singleton()
+    static let shared = DataStore()
     
     private init() {}
     
