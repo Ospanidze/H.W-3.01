@@ -73,8 +73,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descriptionLabel" destination="87m-v9-Aiq" id="ICl-4u-wh5"/>
-                        <outlet property="springAnimationView" destination="eJW-Q3-r2r" id="iwU-7g-dzW"/>
+                        <outlet property="descriptionLabel" destination="87m-v9-Aiq" id="NNC-jY-LBA"/>
+                        <outlet property="springAnimationView" destination="eJW-Q3-r2r" id="Gfu-u9-auz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
